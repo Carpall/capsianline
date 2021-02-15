@@ -31,7 +31,7 @@ class Token:
    # returns a pretty version of the passed token
    def pretty_idsym(kind, value):
       if kind == Token.VALUE or kind == Token.SYMBOL:
-         return value
+         return value.replace('\n', '\\n').replace('\t', '\\t')
       if kind == Token.EOF:
          return "end of file"
       if kind == Token.BAD:

@@ -13,6 +13,10 @@ def system_clear(_):
 def system_close(_):
    exit(0)
 
+def system_exec(args):
+   for arg in args:
+      exec(arg)
+
 # all commands are here
 # table
 command_table = { 
@@ -21,6 +25,7 @@ command_table = {
       # methods
       "echo": system_echo,
       "clear": system_clear,
-      "close": system_close
+      "close": system_close,
+      "exec": system_exec
    }
 }

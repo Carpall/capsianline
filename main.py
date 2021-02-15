@@ -28,7 +28,7 @@ while True:
       ptr = entry[sub_command](args)
    except KeyboardInterrupt:
       # catch ctrl + c
-      print("Type system close to exit, with exitcode 0")
+      print("system close")
    except CCError as e:
       # some errors in the process? let's report it
       print("Error:", e)
